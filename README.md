@@ -38,3 +38,21 @@ Map
     th:text = ${data['data'].id}
     th:text = ${data['data'].getId}
     th:text = ${data['data']['id']}
+
+---------------
+##타임리프 - 기본객체
+
+타임리프의 기본 객체를 설명한다
+
+    Request = ${#request}
+    Response = ${#response}
+    Session = ${#session}
+    ServletContext = ${#servletContext}
+    Locale = ${#locale} 
+
+타임리프의 편의 객체 설명
+
+    request Param = ${param.paramData}
+    session =  ${session.sessionData}
+    bean = ${@helloBean.hello('test text')}
+
