@@ -20,19 +20,20 @@ import java.util.Map;
 public class BasicController {
 
 	@GetMapping
-	public String mainPage(){
+	public String mainPage() {
 		return "index";
 	}
 
 	@GetMapping("text-basic")
-	public String textBasic(Model model){
-		model.addAttribute("data","basicTest");
+	public String textBasic(Model model) {
+		model.addAttribute("data", "basicTest");
 		return "basic/text-basic";
 	}
 
 	@GetMapping("text-unescaped")
-	public String textUnescaped(Model model){
-		model.addAttribute("data", "Hello <b>Spring!</b>");		return "basic/text-unescaped";
+	public String textUnescaped(Model model) {
+		model.addAttribute("data", "Hello <b>Spring!</b>");
+		return "basic/text-unescaped";
 	}
 
 	@GetMapping("variable")
@@ -64,7 +65,7 @@ public class BasicController {
 
 	@Component("helloBean")
 	static class HelloBean {
-		public String hello(String data){
+		public String hello(String data) {
 			return "hello" + data;
 		}
 	}
@@ -83,4 +84,10 @@ public class BasicController {
 		return "basic/link";
 	}
 
+	@GetMapping("literal")
+	public String literal(Model model) {
+		model.addAttribute("data", "world!");
+
+		return "basic/literal";
+	}
 }
