@@ -130,4 +130,26 @@ Html에서는 checked속성이 있을경우 false형태이어도 checked처리�
 `th:checked="true"`
 
 ---------------
+###타임리프 - 반복
 
+타임리프에서는 JAVA의 Eneration, Iterable을 구현한 모든 객체의 반복을 사용할 수 있다.
+Map에도 반복을 사용할 수 있는데 반복을 사용하면 변수에 담기는 값은 Map.Entry이다.
+
+* 반복
+
+`th:each="value : ${객체}"`
+
+* 반복 상태 유지 = (value name) + Stat [생략 가능]
+
+
+    index : 0부터 시작하는 값
+    count : 1부터 시작하는 값
+    size : 전체 사이즈
+    even , odd : 홀수, 짝수 여부( boolean )
+    first , last :처음, 마지막 여부( boolean )
+    current : 현재 객체`
+
+---------------------
+###타임리프 - 조건부 평가
+
+if, unless if
