@@ -114,6 +114,13 @@ public class BasicController {
 		addUsersList(model);
 		return "basic/condition";
 	}
+
+	@GetMapping("comments")
+	public String comments(Model model) {
+		model.addAttribute("data", "Spring!");
+		return "basic/comments";
+	}
+
 	private void addUsersList(Model model) {
 		List<User> users = new ArrayList<>();
 		users.add(new User("userA", 10));
