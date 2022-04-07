@@ -211,3 +211,15 @@ HTML태그를 사용하지 않고 block으로 사용하면된다.
 
 `th:inline="javascript"`
 
+----------------
+###타임리프 - 템플릿 레이아웃
+
+타임리프는 레이아웃을 나눌 수 있도록 fragment 기능을 제공한다. 
+
+레이아웃은 세가지 형식으로 fragment를 지정하여 값을 추가/제거 변경이 가능하다.
+
+* th:fragment
+* th:replace
+* th:import
+
+----------
